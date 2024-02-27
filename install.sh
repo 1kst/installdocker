@@ -26,5 +26,11 @@ fi
 chmod +x /usr/local/bin/docker-compose
 usermod -aG docker $USER
 
+# 启动docker服务
+systemctl start docker
+
+# 设置docker服务开机自启动
+systemctl enable docker
+
 # 输出安装成功信息
 echo "Docker和Docker-compose安装成功"
